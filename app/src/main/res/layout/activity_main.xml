@@ -4,8 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/party"
     android:orientation="vertical"
 
     tools:context=".MainActivity">
 
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Party Time"
+        android:textAlignment="center"
+        android:textSize="30sp" />
 </LinearLayout>
