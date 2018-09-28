@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/party"
+    android:background="@drawable/background"
     android:orientation="vertical"
 
     tools:context=".MainActivity">
@@ -15,11 +15,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="cursive"
-        android:paddingTop="170dp"
+        android:paddingTop="150dp"
         android:text="Party Time"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#FF00FF"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
+
+
+
 </LinearLayout>
