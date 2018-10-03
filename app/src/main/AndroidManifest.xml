@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".AlertDialogActivity" />
         <activity android:name=".menuView" />
-        <activity android:name=".logInorSignup"></activity>
+        <activity android:name=".logInorSignup" />
+        <activity android:name=".ListActivity"></activity>
     </application>
 
 </manifest>

@@ -13,9 +13,10 @@
         android:id="@+id/tv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:paddingTop="80dp"
         android:text="Let's Party"
         android:textAlignment="center"
-        android:paddingTop="80dp"
         android:textSize="36sp" />
 
     <Space
@@ -23,7 +24,7 @@
         android:layout_height="80dp" />
 
     <Button
-        android:id="@+id/Log In"
+        android:id="@+id/LogIn"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
         android:text="Log In"
@@ -36,7 +37,7 @@
         android:layout_height="80dp" />
 
     <Button
-        android:id="@+id/Sign Up"
+        android:id="@+id/SignUp"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
         android:text="Sign Up"
