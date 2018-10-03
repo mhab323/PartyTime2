@@ -19,7 +19,9 @@
         <activity android:name=".AlertDialogActivity" />
         <activity android:name=".menuView" />
         <activity android:name=".logInorSignup" />
-        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".ListActivity" />
+        <activity android:name=".LogInScreen" />
+        <activity android:name=".SignUpscreen"></activity>
     </application>
 
 </manifest>

@@ -13,10 +13,11 @@
         android:id="@+id/tv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
+        android:fontFamily="serif"
         android:paddingTop="80dp"
         android:text="Let's Party"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="36sp" />
 
     <Space

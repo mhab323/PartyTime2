@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/th4"
+    tools:context=".SignUpScreen">
+
+    <TextView
+        android:id="@+id/SignUptv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:paddingTop="50dp"
+        android:text="Sign Up"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingBottom="10dp" />
+
+    <EditText
+        android:id="@+id/usernameSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textSize="24sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingBottom="10dp" />
+
+    <EditText
+        android:id="@+id/EmailSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textPersonName"
+        android:textSize="24sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingBottom="10dp" />
+
+    <EditText
+        android:id="@+id/PasswordSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:textSize="24sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingBottom="10dp" />
+
+    <Button
+        android:id="@+id/btSignup"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_marginLeft="50dp" />
+
+</LinearLayout>
