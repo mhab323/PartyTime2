@@ -25,7 +25,7 @@
         android:paddingBottom="10dp" />
 
     <EditText
-        android:id="@+id/UsernameLgin"
+        android:id="@+id/etUsernameLgin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -39,7 +39,7 @@
         android:paddingBottom="10dp" />
 
     <EditText
-        android:id="@+id/PasswordLgin"
+        android:id="@+id/etPasswordLgin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"

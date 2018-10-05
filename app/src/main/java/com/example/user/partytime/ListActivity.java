@@ -24,8 +24,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         LvCountry = findViewById(R.id.LvCountry);
 
         arrayList.add("Germany");
-        arrayList.add("France");
-        arrayList.add("Italy");
+
 
         arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arrayList);
         LvCountry.setAdapter(arrayAdapter);
@@ -36,11 +35,6 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         String selectedItem =arrayList.get(position);
-        if(selectedItem.equals("Germany"))
-
-        if(position== 0) {
-
-        }
 
 
     }

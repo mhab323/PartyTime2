@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/th"
     android:orientation="vertical"
-    tools:context=".logInorSignup">
+    tools:context=".LogInorSignup">
 
 
     <TextView
@@ -25,7 +25,7 @@
         android:layout_height="80dp" />
 
     <Button
-        android:id="@+id/LogIn"
+        android:id="@+id/btnLogin"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
         android:text="Log In"
@@ -38,7 +38,7 @@
         android:layout_height="80dp" />
 
     <Button
-        android:id="@+id/SignUp"
+        android:id="@+id/btnSigup"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
         android:text="Sign Up"
