@@ -8,8 +8,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class LogInorSignup extends AppCompatActivity implements View.OnClickListener {
-    private Button btnLogin,btnSignup;
+
     private TextView tv2;
+
+    private Button btnLogin,btnSignup;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -4,25 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/gif1"
     android:orientation="vertical"
-
     tools:context=".MainActivity">
 
 
     <TextView
-        android:id="@+id/tv1"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
-        android:paddingTop="150dp"
+        android:fontFamily="serif"
+        android:paddingTop="230dp"
         android:text="Party Time"
         android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="#FF00FF"
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:textStyle="bold|italic" />
-
-
-
 </LinearLayout>
