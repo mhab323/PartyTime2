@@ -22,7 +22,8 @@
         <activity android:name=".ListActivity" />
         <activity android:name=".LogInScreen" />
         <activity android:name=".SignUpScreen" />
-        <activity android:name=".NewBDActivity"></activity>
+        <activity android:name=".NewBDActivity" />
+        <activity android:name=".BdList"></activity>
     </application>
 
 </manifest>

@@ -17,6 +17,6 @@
         android:paddingTop="230dp"
         android:text="Party Time"
         android:textAlignment="center"
-        android:textSize="36sp"
+        android:textSize="45sp"
         android:textStyle="bold|italic" />
 </LinearLayout>

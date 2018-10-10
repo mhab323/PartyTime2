@@ -37,7 +37,7 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
         String password = etPasswordLgin.getText().toString();
         switch (v.getId()) {
             case R.id.btLgin:
-                Intent i = new Intent(this,NewBDActivity .class);
+                Intent i = new Intent(this,BdList .class);
 
                 startActivity(i);
                 break;
