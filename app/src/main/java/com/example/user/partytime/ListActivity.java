@@ -13,28 +13,42 @@ import java.util.ArrayList;
 public class ListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     ListView LvCountry;
-    ArrayAdapter<String> arrayAdapter;
-    ArrayList<String> arrayList = new ArrayList<> ();
+    CustomAdapter adapter;
+    ArrayList<Item> items;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
         LvCountry = findViewById(R.id.LvCountry);
 
-        arrayList.add("Germany");
+        items= new ArrayList<>();
+
+        items.add(new Item(R.drawable.th,"first"));
+        items.add(new Item(R.drawable.th2,"second"));
+        items.add(new Item(R.drawable.th4,"third"));
+        items.add(new Item(R.drawable.bg,"fourth"));
+
+        adapter = new CustomAdapter(this,R.layout.custom_row,items);
+
+        LvCountry.setAdapter(adapter);
+        LvCountry.setOnItemClickListener(this);
 
 
-        arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arrayList);
-        LvCountry.setAdapter(arrayAdapter);
+
+
+
+
+
 
     }
 
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        String selectedItem =arrayList.get(position);
+        Item selectedItem =items.get(position);
 
 
     }

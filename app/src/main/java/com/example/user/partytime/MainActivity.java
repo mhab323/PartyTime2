@@ -24,9 +24,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void schedule(TimerTask task){
-        long delay;
-        long period;
-    }
+
 
 }

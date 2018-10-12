@@ -9,6 +9,6 @@
 
     <ListView
         android:id="@+id/LvCountry"
-        android:layout_width="105dp"
-        android:layout_height="446dp" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +19,7 @@
         <activity android:name=".AlertDialogActivity" />
         <activity android:name=".menuView" />
         <activity android:name=".LogInorSignup" />
-        <activity android:name=".ListActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".LogInScreen" />
         <activity android:name=".SignUpScreen" />
         <activity android:name=".NewBDActivity" />
