@@ -57,6 +57,7 @@
         android:id="@+id/btLgin"
         android:layout_width="282dp"
         android:layout_height="50dp"
+        android:layout_gravity="center"
         android:text="Done"
         android:textAlignment="center"
         android:textSize="24sp"

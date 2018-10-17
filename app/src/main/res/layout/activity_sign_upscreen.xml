@@ -71,6 +71,7 @@
         android:id="@+id/btSignup"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Done"
         android:textAlignment="center"
         android:textSize="24sp"

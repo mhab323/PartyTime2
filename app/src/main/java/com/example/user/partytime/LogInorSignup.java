@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LogInorSignup extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,12 +35,14 @@ public class LogInorSignup extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnLogin:
-                Intent i = new Intent(this,LogInScreen.class);
+                Intent i = new Intent(this,MainActivity.class);
+                Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
 
                 startActivity(i);
                 break;
             case R.id.btnSigup:
                 Intent i2 = new Intent(this,SignUpScreen.class);
+                Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
                 startActivity(i2);
                 break;
             default:

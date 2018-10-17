@@ -1,21 +1,34 @@
 package com.example.user.partytime;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpScreen extends AppCompatActivity implements View.OnClickListener {
-   private TextView SignUptv;
+    private static final String TAG = "firebase" ;
+    private TextView SignUptv;
 
    private   EditText usernameSignup;
    private EditText EmailSignup;
    private EditText PasswordSignup;
 
+
    private Button btSignup;
+
+    private FirebaseAuth mAuth;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +44,8 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
 
 
         btSignup = findViewById(R.id.btnSigup);
+
+        mAuth = FirebaseAuth.getInstance();
     }
 
     @Override
@@ -42,13 +57,44 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()) {
             case R.id.btSignup:
-                Intent i = new Intent(this,NewBDActivity .class);
-
+                Intent i = new Intent(this,BdList .class);
                 startActivity(i);
                 break;
-            default:
-                break;
+
 
         }
+        createNewUser("mhmadabas17@gmail.com","adasdsdsadd");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        updateUI(currentUser);
+    }
+
+    public  void createNewUser(String email, String password){
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "createUserWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+//                            updateUI(user);
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                            Toast.makeText( SignUpScreen.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+//                            updateUI(null);
+                        }
+
+                        // ...
+                    }
+                });
     }
 }
+
