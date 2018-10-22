@@ -12,19 +12,20 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class CustomAdapter extends ArrayAdapter<Item> {
+public class CustomAdapter extends ArrayAdapter<BirthDay> {
 
     private int resourceLayout;
     private Context mContext;
 
 
-    public CustomAdapter(@NonNull Context context, int resource, @NonNull List<Item> objects) {
-        super(context, resource, objects);
+    public CustomAdapter(@NonNull View.OnClickListener context, int resource, @NonNull ArrayList<BirthDay> objects) {
+        super((Context) context, resource, objects);
 
         this.resourceLayout=resource;
-        this.mContext=context;
+        this.mContext= (Context) context;
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
@@ -32,12 +33,12 @@ public class CustomAdapter extends ArrayAdapter<Item> {
         if(v==null)
             v= LayoutInflater.from(mContext).inflate(resourceLayout,parent,false);
 
-        Item p= getItem(position);
+        BirthDay p= getItem(position);
 
         if (p != null){
 
             TextView tvName = (TextView) v.findViewById(R.id.tvTitle1);
-            tvName.setText(p.getName());
+            tvName.setText(p.getDate());
 
             ImageView imageView =(ImageView) v.findViewById(R.id.imageView);
             imageView.setImageResource(p.getImage());

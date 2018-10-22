@@ -31,7 +31,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         items.add(new Item(R.drawable.th4,"third"));
         items.add(new Item(R.drawable.bg,"fourth"));
 
-        adapter = new CustomAdapter(this,R.layout.custom_row,items);
+
 
         LvCountry.setAdapter(adapter);
         LvCountry.setOnItemClickListener(this);

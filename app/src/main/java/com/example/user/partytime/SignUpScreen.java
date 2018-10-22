@@ -55,14 +55,14 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
         String Email = EmailSignup.getText().toString();
         String password = PasswordSignup.getText().toString();
 
-        switch (v.getId()) {
-            case R.id.btSignup:
-                Intent i = new Intent(this,BdList .class);
-                startActivity(i);
-                break;
+        if (v == btSignup) {
+            Intent i = new Intent(this, BdList.class);
+            Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
+            v.getContext().startActivity(i);
 
 
         }
+
         createNewUser("mhmadabas17@gmail.com","adasdsdsadd");
     }
 
@@ -92,7 +92,7 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
 //                            updateUI(null);
                         }
 
-                        // ...
+
                     }
                 });
     }

@@ -14,9 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:paddingTop="230dp"
+        android:paddingTop="290dp"
         android:text="Party Time"
         android:textAlignment="center"
+        android:textAllCaps="true"
         android:textSize="45sp"
         android:textStyle="bold|italic" />
 </LinearLayout>

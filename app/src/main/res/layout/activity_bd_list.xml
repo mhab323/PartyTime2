@@ -5,13 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bdlistbg"
-    android:gravity="bottom"
+    android:gravity="top"
     android:orientation="vertical"
     tools:context=".BdList">
 
+    <ListView
+        android:id="@+id/LvBdList"
+        android:layout_width="match_parent"
+        android:layout_height="452dp" >
+
+    </ListView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+
     <ImageButton
         android:id="@+id/addItem"
-        android:layout_width="83dp"
+        android:layout_width="90dp"
         android:layout_height="80dp"
         android:layout_marginBottom="30dp"
         android:layout_marginLeft="25dp"

@@ -4,15 +4,20 @@ import java.util.ArrayList;
 
 public class BirthDay {
     private String date;
-    private String image;
+    private int image;
     private ArrayList<String> guests;
     private ArrayList<ToDo> toDos;
 
-    public BirthDay(String date, String image, ArrayList<String> guests, ArrayList<ToDo> toDos) {
+    public BirthDay(String date, int image, ArrayList<String> guests, ArrayList<ToDo> toDos) {
         this.date = date;
         this.image = image;
         this.guests = guests;
         this.toDos = toDos;
+    }
+
+    public BirthDay(String date, int image) {
+        this.date = date;
+        this.image=image;
     }
 
     public String getDate() {
@@ -23,11 +28,11 @@ public class BirthDay {
         this.date = date;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 

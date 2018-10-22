@@ -35,7 +35,7 @@ public class LogInorSignup extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnLogin:
-                Intent i = new Intent(this,MainActivity.class);
+                Intent i = new Intent(this,LogInScreen.class);
                 Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
 
                 startActivity(i);
