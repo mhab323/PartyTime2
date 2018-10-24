@@ -40,7 +40,7 @@
             android:layout_weight="1" />
 
         <ImageButton
-            android:id="@+id/btCamera"
+            android:id="@+id/btTakephoto"
             android:layout_width="158dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

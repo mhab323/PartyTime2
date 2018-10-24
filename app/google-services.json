@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "156593181603",
+    "firebase_url": "https://partytime-66d5d.firebaseio.com",
+    "project_id": "partytime-66d5d",
+    "storage_bucket": "partytime-66d5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156593181603:android:032c21a528d5ec98",
+        "android_client_info": {
+          "package_name": "com.example.user.partytime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156593181603-42str1sl4d0go03anve9j2sse4ig1mt2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.partytime",
+            "certificate_hash": "090b37ae54543232e42d4a8a51221c2a9a993f6a"
+          }
+        },
+        {
+          "client_id": "156593181603-t5ajs58l5afe0tgu8b27ejasmkihag28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqs8ZdQVcYKcLqqqnYb6GU1GmnctqLlVY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156593181603-t5ajs58l5afe0tgu8b27ejasmkihag28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
