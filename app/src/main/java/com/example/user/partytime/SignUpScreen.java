@@ -63,7 +63,7 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
 
         }
 
-        createNewUser("mhmadabas17@gmail.com","adasdsdsadd");
+        createUser("mhmadabas17@gmail.com","adasdsdsadd");
     }
 
     @Override
@@ -74,7 +74,7 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
 //        updateUI(currentUser);
     }
 
-    public  void createNewUser(String email, String password){
+    public  void createUser(String email, String password){
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
