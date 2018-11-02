@@ -13,9 +13,10 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class NewBDActivity extends AppCompatActivity implements View.OnClickListener {
-
+    Bitmap photo;
     private static final int CAMERA_REQUEST = 0;
 
     TextView tvNewItem;
@@ -56,6 +57,9 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.btDone:
                 Intent i = new Intent(this, BdList.class);
+           /*     BirthDay item = new BirthDay(photo, ItemName.getText().toString());
+                i.putExtra("item", item);
+           */     Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
                 startActivity(i);
                 break;
 
@@ -70,7 +74,7 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
 
     public void onActivityResult(int requestCode,int resultCode,Intent data){
         if(requestCode == CAMERA_REQUEST && resultCode== Activity.RESULT_OK){
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
+            photo = (Bitmap) data.getExtras().get("data");
             imageView.setImageBitmap(photo);
         }
     }

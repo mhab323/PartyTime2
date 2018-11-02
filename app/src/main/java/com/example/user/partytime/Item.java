@@ -1,19 +1,23 @@
 package com.example.user.partytime;
 
-public class Item {
-    private int image;
+import android.graphics.Bitmap;
+
+import java.io.Serializable;
+
+public class Item implements Serializable{
+    private Bitmap image;
     private String name;
 
-    public Item(int image, String name) {
+    public Item(Bitmap image, String name) {
         this.image = image;
         this.name = name;
     }
 
-    public int getImage() {
+    public Bitmap getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(Bitmap image) {
         this.image = image;
     }
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home"
+    android:background="@drawable/th2">
+
+    <TextView
+        android:id="@+id/tvHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textAlignment="center"
+        android:textSize="50sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/btItemList"
+        android:layout_width="300dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        android:text="Item List"
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/btGuestsList"
+        android:layout_width="300dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        android:text="Guests List"
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/btBDplaces"
+        android:layout_width="300dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        android:text="birthday places"
+        android:textSize="20sp" />
+</LinearLayout>

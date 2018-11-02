@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class BdList extends AppCompatActivity {
+public class BdList extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton addItem;
     CustomAdapter adapter;
@@ -20,6 +20,9 @@ public class BdList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bd_list);
 
+        addItem = findViewById(R.id.addItem);
+        addItem.setOnClickListener(this);
+
         BirthDay= new ArrayList<>();
 
         BirthDay.add(new BirthDay("15.7",R.drawable.bg));
@@ -28,24 +31,27 @@ public class BdList extends AppCompatActivity {
         BirthDay.add(new BirthDay("aasds",R.drawable.bg));
 
 
-        addItem=(ImageButton) findViewById(R.id.addItem);
-        addItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Button is clicked",Toast.LENGTH_LONG).show();
+
+                adapter = new CustomAdapter(this,R.layout.custom_row,BirthDay);
+
+
+            }
+
+    @Override
+    public void onClick(View v) {
+
+
                 switch (v.getId()) {
                     case R.id.addItem:
                         Intent i = new Intent(getApplicationContext(),NewBDActivity.class);
+                        Toast.makeText(getApplicationContext(),"Button is clicked",Toast.LENGTH_LONG).show();
                         startActivity(i);
                         break;
                     default:
                         break;
 
                 }
-                adapter = new CustomAdapter(this,R.layout.custom_row,BirthDay);
-
-
-            }
-        });
     }
 }
+
+

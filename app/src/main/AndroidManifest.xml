@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NewBDActivity">
+        <activity android:name=".BdList">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,8 +22,11 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".LogInorSignup" />
         <activity android:name=".SignUpScreen" />
-        <activity android:name=".BdList" />
-        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".home" />
+        <activity android:name=".ListActivity" />
+        <activity android:name=".NewBDActivity" />
+        <activity android:name=".GuestsList" />
+        <activity android:name=".BdPlaces"></activity>
     </application>
 
 </manifest>

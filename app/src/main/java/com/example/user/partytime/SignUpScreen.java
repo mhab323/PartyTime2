@@ -44,6 +44,7 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
 
 
         btSignup = findViewById(R.id.btnSigup);
+        btSignup.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
     }
@@ -56,7 +57,7 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
         String password = PasswordSignup.getText().toString();
 
         if (v == btSignup) {
-            Intent i = new Intent(this, BdList.class);
+            Intent i = new Intent(this, home.class);
             Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
             v.getContext().startActivity(i);
 
