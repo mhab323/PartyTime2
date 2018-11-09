@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@drawable/bg_warm_dark"
+tools:context=".Places">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:paddingBottom="50dp"
+        android:text="Birthday Places"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        android:textStyle="bold|italic" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btIjump"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:text="ijump"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <Space
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btXpark"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:text="Extreme Park"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="75dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btCinema"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:text="Cinema"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <Space
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btBowling"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:text="Bowling"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:text="Button"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <Space
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:text="Button"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+</LinearLayout>

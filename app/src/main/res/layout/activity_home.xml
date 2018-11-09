@@ -12,8 +12,11 @@
         android:id="@+id/tvHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="cursive"
         android:text="Home"
         android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
         android:textSize="50sp" />
 
     <Space

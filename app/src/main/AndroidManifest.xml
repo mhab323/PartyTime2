@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FireActivity">
+        <activity android:name=".Places">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,11 +23,17 @@
         <activity android:name=".LogInorSignup" />
         <activity android:name=".SignUpScreen" />
         <activity android:name=".home" />
-        <!--<activity android:name=".ListActivity" />-->
-        <activity android:name=".NewBDActivity" />
+        <!-- <activity android:name=".ListActivity" /> -->
+        <activity android:name=".FireActivity" />
         <activity android:name=".GuestsList" />
         <activity android:name=".BdPlaces" />
-        <activity android:name=".BdList"></activity>
+        <activity android:name=".BdList" />
+        <activity android:name=".NewBDActivity" />
+        <activity android:name=".BirthdayPlaces" />
+        <activity android:name=".Ijump" />
+        <activity android:name=".Xpark" />
+        <activity android:name=".Cinema" />
+        <activity android:name=".Bowling"></activity>
     </application>
 
 </manifest>

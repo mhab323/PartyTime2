@@ -3,7 +3,9 @@ package com.example.user.partytime;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.Image;
+import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,9 +17,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileNotFoundException;
+import java.io.Serializable;
+
 public class NewBDActivity extends AppCompatActivity implements View.OnClickListener {
     Bitmap photo;
     private static final int CAMERA_REQUEST = 0;
+    private static final int SELECT_IMAGE = 1;
 
     TextView tvNewItem;
 
@@ -48,7 +54,7 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
         btTakephoto = findViewById(R.id.btTakephoto);
         btTakephoto.setOnClickListener(this);
 
-        imageView= findViewById(R.id.imageView);
+        imageView = findViewById(R.id.imageView);
 
     }
 
@@ -59,24 +65,41 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
                 Intent i = new Intent(this, BdList.class);
            /*     BirthDay item = new BirthDay(photo, ItemName.getText().toString());
                 i.putExtra("item", item);
-           */     Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
+           */
+                Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
                 startActivity(i);
                 break;
+                default:
+                    break;
 
         }
 
-        if(v == btTakephoto){
+        if (v == btTakephoto) {
             Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivityForResult(i,CAMERA_REQUEST);
+            startActivityForResult(i, CAMERA_REQUEST);
 
+        }
+        if (v == btGallery) {
+            Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            startActivityForResult(i, SELECT_IMAGE);
         }
     }
 
-    public void onActivityResult(int requestCode,int resultCode,Intent data){
-        if(requestCode == CAMERA_REQUEST && resultCode== Activity.RESULT_OK){
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+
             photo = (Bitmap) data.getExtras().get("data");
             imageView.setImageBitmap(photo);
+        } else if (requestCode == SELECT_IMAGE && resultCode == Activity.RESULT_OK) {
+            Uri targetUri = data.getData();
+            try {
+                bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(targetUri));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
         }
     }
-
 }
+
+
