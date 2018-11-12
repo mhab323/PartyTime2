@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Places">
+        <activity android:name=".Ijump">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,7 +30,7 @@
         <activity android:name=".BdList" />
         <activity android:name=".NewBDActivity" />
         <activity android:name=".BirthdayPlaces" />
-        <activity android:name=".Ijump" />
+        <activity android:name=".Places" />
         <activity android:name=".Xpark" />
         <activity android:name=".Cinema" />
         <activity android:name=".Bowling"></activity>
