@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +18,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.Serializable;
 
@@ -35,6 +40,8 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
     ImageButton btGallery, btTakephoto;
 
     Bitmap bitmap;
+    final FirebaseDatabase database = FirebaseDatabase.getInstance();
+    final DatabaseReference myRef = database.getReference().child("Birthdays");
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +61,9 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
         btTakephoto = findViewById(R.id.btTakephoto);
         btTakephoto.setOnClickListener(this);
 
-        imageView = findViewById(R.id.imageView);
+        imageView = findViewById(R.id.imageView2);
+
+
 
     }
 
@@ -63,10 +72,12 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.btDone:
                 Intent i = new Intent(this, BdList.class);
-           /*     BirthDay item = new BirthDay(photo, ItemName.getText().toString());
+
+                Item item = new Item(BitMapToString(photo), ItemName.getText().toString());
                 i.putExtra("item", item);
-           */
-                Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
+                myRef.push().setValue(item);
+
+              //  Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
                 startActivity(i);
                 break;
                 default:
@@ -99,6 +110,13 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
             }
 
         }
+    }
+    public String BitMapToString(Bitmap bitmap) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+        String temp = Base64.encodeToString(b, Base64.DEFAULT);
+        return temp;
     }
 }
 

@@ -5,16 +5,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
+import java.util.Map;
 
 public class BdList extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton addItem;
     CustomAdapter adapter;
-    ArrayList<BirthDay> BirthDay;
+    ListView LvBdList;
+    ArrayList<Item> BirthDay;
 
+    final FirebaseDatabase database = FirebaseDatabase.getInstance();
+    final DatabaseReference myRef = database.getReference().child("Birthdays");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,32 +36,62 @@ public class BdList extends AppCompatActivity implements View.OnClickListener {
 
         BirthDay= new ArrayList<>();
 
-        BirthDay.add(new BirthDay("15.7",R.drawable.bg));
-        BirthDay.add(new BirthDay("sada",R.drawable.th2));
-        BirthDay.add(new BirthDay("adsd",R.drawable.th4));
-        BirthDay.add(new BirthDay("aasds",R.drawable.bg));
+        LvBdList = findViewById(R.id.LvBdList);
+        adapter = new CustomAdapter(this,R.layout.custom_row,BirthDay);
+        LvBdList.setAdapter(adapter);
 
+        myRef.addChildEventListener(new ChildEventListener() {
 
-
-                adapter = new CustomAdapter(this,R.layout.custom_row,BirthDay);
-
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                Map<String, String> map = (Map<String, String>) dataSnapshot.getValue();
+                String name = map.get("image");
+                String image = map.get("name");
+                BirthDay.add(new Item(name, image));
+                adapter.notifyDataSetChanged();
+         //       tvEmail.setText(name);
+          //      tvProfession.setText(profession);
+            }
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
 
             }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+
+    }
 
     @Override
     public void onClick(View v) {
 
 
-                switch (v.getId()) {
-                    case R.id.addItem:
-                        Intent i = new Intent(getApplicationContext(),NewBDActivity.class);
-                        Toast.makeText(getApplicationContext(),"Button is clicked",Toast.LENGTH_LONG).show();
-                        startActivity(i);
-                        break;
-                    default:
-                        break;
+        switch (v.getId()) {
+            case R.id.addItem:
+                Intent i = new Intent(getApplicationContext(),NewBDActivity.class);
+                Toast.makeText(getApplicationContext(),"Button is clicked",Toast.LENGTH_LONG).show();
+                startActivity(i);
+                break;
+            default:
+                break;
 
-                }
+        }
     }
 }
 

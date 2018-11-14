@@ -5,19 +5,19 @@ import android.graphics.Bitmap;
 import java.io.Serializable;
 
 public class Item implements Serializable{
-    private Bitmap image;
+    private String image;
     private String name;
 
-    public Item(Bitmap image, String name) {
+    public Item(String image, String name) {
         this.image = image;
         this.name = name;
     }
 
-    public Bitmap getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(Bitmap image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
