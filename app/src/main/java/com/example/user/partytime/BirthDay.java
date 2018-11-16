@@ -1,23 +1,51 @@
 package com.example.user.partytime;
 
+import java.io.Serializable;
+import java.security.PrivateKey;
 import java.util.ArrayList;
 
-public class BirthDay {
+public class BirthDay implements Serializable {
     private String date;
-    private int image;
-    private ArrayList<String> guests;
-    private ArrayList<ToDo> toDos;
+    private String day;
+    private String place;
+    private  String street;
 
-    public BirthDay(String date, int image, ArrayList<String> guests, ArrayList<ToDo> toDos) {
+    public BirthDay(String date, String day, String place, String street) {
         this.date = date;
-        this.image = image;
-        this.guests = guests;
-        this.toDos = toDos;
+        this.day = day;
+        this.place = place;
+        this.street = street;
     }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+
 
     public BirthDay(String date, int image) {
         this.date = date;
-        this.image=image;
+
     }
 
     public String getDate() {
@@ -27,28 +55,9 @@ public class BirthDay {
     public void setDate(String date) {
         this.date = date;
     }
-
-    public int getImage() {
-        return image;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
-    }
-
-    public ArrayList<String> getGuests() {
-        return guests;
-    }
-
-    public void setGuests(ArrayList<String> guests) {
-        this.guests = guests;
-    }
-
-    public ArrayList<ToDo> getToDos() {
-        return toDos;
-    }
-
-    public void setToDos(ArrayList<ToDo> toDos) {
-        this.toDos = toDos;
-    }
 }
+
+
+
+
+

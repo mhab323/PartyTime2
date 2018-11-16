@@ -29,7 +29,10 @@ public class CustomAdapter extends ArrayAdapter<Item> {
 
         this.resourceLayout=resource;
         this.mContext= (Context) context;
-    }
+}
+
+
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
         View v= convertView;

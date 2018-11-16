@@ -20,9 +20,11 @@ import java.util.Map;
 public class BdList extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton addItem;
+
     CustomAdapter adapter;
-    ListView LvBdList;
     ArrayList<Item> BirthDay;
+
+    ListView LvBdList;
 
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     final DatabaseReference myRef = database.getReference().child("Birthdays");

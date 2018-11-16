@@ -33,7 +33,8 @@
         <activity android:name=".Places" />
         <activity android:name=".Xpark" />
         <activity android:name=".Cinema" />
-        <activity android:name=".Bowling"></activity>
+        <activity android:name=".Bowling" />
+        <activity android:name=".addParty"></activity>
     </application>
 
 </manifest>
