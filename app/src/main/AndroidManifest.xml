@@ -34,7 +34,8 @@
         <activity android:name=".Xpark" />
         <activity android:name=".Cinema" />
         <activity android:name=".Bowling" />
-        <activity android:name=".addParty"></activity>
+        <activity android:name=".addParty" />
+        <activity android:name=".NewBDparty"></activity>
     </application>
 
 </manifest>
