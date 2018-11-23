@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NewBDActivity">
+        <activity android:name=".home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +22,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".LogInorSignup" />
         <activity android:name=".SignUpScreen" />
-        <activity android:name=".home" />
+        <activity android:name=".NewBDActivity" />
         <!-- <activity android:name=".ListActivity" /> -->
         <activity android:name=".FireActivity" />
         <activity android:name=".GuestsList" />
@@ -35,7 +35,8 @@
         <activity android:name=".Cinema" />
         <activity android:name=".Bowling" />
         <activity android:name=".addParty" />
-        <activity android:name=".NewBDparty"></activity>
+        <activity android:name=".NewBDparty" />
+        <activity android:name=".sharedActivity"></activity>
     </application>
 
 </manifest>

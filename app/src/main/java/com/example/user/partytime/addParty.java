@@ -1,11 +1,13 @@
 package com.example.user.partytime;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -44,6 +46,17 @@ public class addParty extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+
+        switch (v.getId()) {
+            case R.id.addItem2:
+                Intent i = new Intent(getApplicationContext(),NewBDparty.class);
+                Toast.makeText(getApplicationContext(),"Button is clicked",Toast.LENGTH_LONG).show();
+                startActivity(i);
+                break;
+            default:
+                break;
+
+        }
 
     }
 }

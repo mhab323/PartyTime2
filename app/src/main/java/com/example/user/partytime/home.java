@@ -45,7 +45,7 @@ public class home extends AppCompatActivity implements View.OnClickListener {
                 startActivity(i2);
                 break;
             case R.id.btBDplaces:
-                Intent i3 = new Intent(this, BdPlaces.class);
+                Intent i3 = new Intent(this, Places.class);
                 Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
                 startActivity(i3);
                 break;
