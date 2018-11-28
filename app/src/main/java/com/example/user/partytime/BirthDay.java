@@ -5,41 +5,39 @@ import java.security.PrivateKey;
 import java.util.ArrayList;
 
 public class BirthDay implements Serializable {
+    private String name;
     private String date;
-    private String day;
-    private String place;
-    private  String street;
+    private String address;
 
-    public BirthDay(String date, String day, String place, String street) {
+    private ArrayList<Item> items;
+    private ArrayList<Guest> guests;
+
+
+    public BirthDay(String name, String date, String address) {
         this.date = date;
-        this.day = day;
-        this.place = place;
-        this.street = street;
+        this.name = name;
+        this.address = address;
+
+        items = new ArrayList<>();
+        guests = new ArrayList<>();
     }
 
-    public String getDay() {
-        return day;
+    public String getName() {
+        return name;
     }
 
-    public void setDay(String day) {
-        this.day = day;
+    public void setName(String day) {
+        this.name = day;
     }
 
     public String getPlace() {
-        return place;
+        return address;
     }
 
     public void setPlace(String place) {
-        this.place = place;
+        this.address = place;
     }
 
-    public String getStreet() {
-        return street;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
 
 
 
@@ -54,6 +52,13 @@ public class BirthDay implements Serializable {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public void addGuest(ArrayList<Guest> guests){
+        guests.addAll(guests);
+    }
+    public void addItem(Item item){
+        items.add(item);
     }
 }
 

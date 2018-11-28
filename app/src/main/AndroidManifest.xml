@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user.partytime">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
-
-    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -13,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NewBDActivity">
+        <activity android:name=".addParty">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,9 +37,10 @@
         <activity android:name=".Xpark" />
         <activity android:name=".Cinema" />
         <activity android:name=".Bowling" />
-        <activity android:name=".addParty" />
+        <activity android:name=".NewBDActivity" />
         <activity android:name=".NewBDparty" />
-        <activity android:name=".sharedActivity"></activity>
+        <activity android:name=".sharedActivity" />
+        <activity android:name=".PartyDetailsActivity"></activity>
     </application>
 
 </manifest>

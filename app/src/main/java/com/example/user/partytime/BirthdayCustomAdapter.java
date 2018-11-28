@@ -36,8 +36,8 @@ public class BirthdayCustomAdapter extends ArrayAdapter<BirthDay> {
 
         if (p != null) {
 
-            TextView tvName = (TextView) v.findViewById(R.id.tvTitle1);
-            tvName.setText(p.getDate());
+            TextView tvName = (TextView) v.findViewById(R.id.tvTitle2);
+            tvName.setText(p.getName());
         }
         return v;
 

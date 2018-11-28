@@ -9,7 +9,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class NewBDparty extends AppCompatActivity implements View.OnClickListener {
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+public class NewBDparty extends AppCompatActivity {
 
     TextView tvNewParty;
 
@@ -25,19 +28,33 @@ public class NewBDparty extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_bdparty);
 
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference myRef = database.getReference().child("Birthdays");
+
         tvNewParty = findViewById(R.id.tvNewParty);
         etPartyName = findViewById(R.id.etPartyName);
         etDate = findViewById(R.id.etDate);
         etAddress = findViewById(R.id.etAddress);
 
         btDone2 = findViewById(R.id.btDone2);
-        btDone2.setOnClickListener(this);
+        btDone2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String address = etAddress.getText().toString();
+                String name = etPartyName.getText().toString();
+                String date = etDate.getText().toString();
+                Intent i = new Intent(getApplicationContext(),addParty.class);
+                Toast.makeText(getApplicationContext(),"Button is clicked",Toast.LENGTH_LONG).show();
+                myRef.push().setValue(new BirthDay(name,date,address));
+                startActivity(i);
+            }
+        });
 
 
 
     }
 
-    @Override
+ /*   @Override
     public void onClick(View v) {
 
         switch (v.getId()) {
@@ -51,5 +68,5 @@ public class NewBDparty extends AppCompatActivity implements View.OnClickListene
 
         }
 
-    }
+    }*/
 }
