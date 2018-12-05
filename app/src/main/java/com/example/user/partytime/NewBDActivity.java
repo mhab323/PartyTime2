@@ -78,8 +78,12 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.btDone:
                 Intent i = new Intent(this, BdList.class);
-
-                Item item = new Item(BitMapToString(photo), ItemName.getText().toString());
+                Item item;
+                if(photo != null) {
+                    item = new Item(BitMapToString(photo), ItemName.getText().toString());
+                }else{
+                    item = new Item( ItemName.getText().toString());
+                }
                 i.putExtra("item", item);
                 myRef.push().setValue(item);
 

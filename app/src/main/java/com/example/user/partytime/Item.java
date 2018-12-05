@@ -6,6 +6,11 @@ import java.io.Serializable;
 
 public class Item implements Serializable{
     private String image;
+
+    public Item(String name) {
+        this.name = name;
+    }
+
     private String name;
 
     public Item(String image, String name) {
