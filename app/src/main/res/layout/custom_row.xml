@@ -26,18 +26,11 @@
             <TextView
                 android:id="@+id/tvTitle1"
                 android:layout_width="match_parent"
-                android:layout_height="74dp"
+                android:layout_height="match_parent"
                 android:text="TextView"
                 android:textAlignment="center"
-                android:textSize="24sp" />
+                android:textSize="30sp" />
 
-            <TextView
-                android:id="@+id/tvTitle2"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:text="TextView"
-                android:textAlignment="center"
-                android:textSize="24sp" />
         </LinearLayout>
 
     </LinearLayout>

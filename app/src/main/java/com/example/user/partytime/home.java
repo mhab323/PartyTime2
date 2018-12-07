@@ -12,7 +12,7 @@ public class home extends AppCompatActivity implements View.OnClickListener {
 
     TextView tvHome;
 
-    Button btItemList, btGuestsList, btBDplaces;
+    Button btItemList, btGuestsList, btBDplaces,btBack2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,8 @@ public class home extends AppCompatActivity implements View.OnClickListener {
         btGuestsList.setOnClickListener(this);
         btBDplaces = findViewById(R.id.btBDplaces);
         btBDplaces.setOnClickListener(this);
-
+        btBack2 = findViewById(R.id.btBack2);
+        btBack2.setOnClickListener(this);
 
     }
 
@@ -48,6 +49,11 @@ public class home extends AppCompatActivity implements View.OnClickListener {
                 Intent i3 = new Intent(this, Places.class);
                 Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
                 startActivity(i3);
+                break;
+            case R.id.btBack:
+                Intent i4 = new Intent(this, addParty.class);
+                Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
+                startActivity(i4);
                 break;
             default:
                 break;

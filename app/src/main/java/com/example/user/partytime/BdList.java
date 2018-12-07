@@ -1,11 +1,14 @@
 package com.example.user.partytime;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
@@ -18,6 +21,10 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class BdList extends AppCompatActivity implements View.OnClickListener {
+
+    Button btBack;
+
+    TextView tvAddItem;
 
     ImageButton addItem;
 
@@ -37,6 +44,11 @@ public class BdList extends AppCompatActivity implements View.OnClickListener {
         addItem.setOnClickListener(this);
 
         BirthDay= new ArrayList<>();
+
+        tvAddItem = findViewById(R.id.tvAddItem);
+
+        btBack = findViewById(R.id.btBack);
+        btBack.setOnClickListener(this);
 
         LvBdList = findViewById(R.id.LvBdList);
         adapter = new CustomAdapter(this,R.layout.custom_row,BirthDay);
@@ -90,8 +102,13 @@ public class BdList extends AppCompatActivity implements View.OnClickListener {
                 Toast.makeText(getApplicationContext(),"Button is clicked",Toast.LENGTH_LONG).show();
                 startActivity(i);
                 break;
-            default:
-                break;
+                case R.id.btBack:
+                    Intent i2 = new Intent(getApplicationContext(),home.class);
+                    Toast.makeText(getApplicationContext(),"Button is clicked",Toast.LENGTH_LONG).show();
+                    startActivity(i2);
+                    break;
+                default:
+                    break;
 
         }
     }

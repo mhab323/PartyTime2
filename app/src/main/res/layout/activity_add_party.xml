@@ -22,7 +22,7 @@
     <ListView
         android:id="@+id/lvParties"
         android:layout_width="match_parent"
-        android:layout_height="400dp" />
+        android:layout_height="374dp" />
 
     <ImageButton
         android:id="@+id/addItem2"

@@ -107,7 +107,7 @@ public class addParty extends AppCompatActivity implements View.OnClickListener,
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             BirthDay birthDay = Birthday2.get(position);
-            Intent i = new Intent(addParty.this, PartyDetailsActivity.class);
+            Intent i = new Intent(addParty.this, home.class);
             i.putExtra("birthday", birthDay);
             startActivity(i);
     }

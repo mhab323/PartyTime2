@@ -19,16 +19,16 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpScreen extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "firebase" ;
-    private TextView SignUptv;
+     TextView SignUptv;
 
-   private   EditText usernameSignup;
-   private EditText EmailSignup;
-   private EditText PasswordSignup;
+      EditText usernameSignup;
+    EditText EmailSignup;
+    EditText PasswordSignup;
 
 
-   private Button btSignup;
+    Button btSignup;
 
-    private FirebaseAuth mAuth;
+     FirebaseAuth mAuth;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +57,7 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
         String password = PasswordSignup.getText().toString();
 
         if (v == btSignup) {
-            Intent i = new Intent(this, home.class);
+            Intent i = new Intent(this, addParty.class);
             Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
             v.getContext().startActivity(i);
 

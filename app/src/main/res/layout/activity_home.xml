@@ -54,4 +54,14 @@
         android:layout_gravity="center"
         android:text="birthday places"
         android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="26dp" />
+
+    <Button
+        android:id="@+id/btBack2"
+        android:layout_width="81dp"
+        android:layout_height="57dp"
+        android:background="@android:drawable/ic_media_previous" />
 </LinearLayout>

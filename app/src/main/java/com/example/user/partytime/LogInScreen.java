@@ -60,7 +60,7 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
         String password = etPasswordLgin.getText().toString();
 
         if (v == btLgin) {
-            Intent i = new Intent(this, home.class);
+            Intent i = new Intent(this, addParty.class);
             Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
             v.getContext().startActivity(i);
 
