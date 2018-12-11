@@ -1,5 +1,7 @@
 package com.example.user.partytime;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class home extends AppCompatActivity implements View.OnClickListener {
+
+public class home extends AppCompatActivity implements View.OnClickListener,DialogInterface.OnClickListener {
 
     TextView tvHome;
 
@@ -88,4 +91,29 @@ public class home extends AppCompatActivity implements View.OnClickListener {
 
         }
     }
-}
+
+
+        @Override
+        public void onClick (DialogInterface dialog,int which){
+            if (which == dialog.BUTTON_POSITIVE) {
+                super.onBackPressed();
+                dialog.cancel();
+            }
+            if (which == dialog.BUTTON_NEGATIVE) {
+                dialog.cancel();
+            }
+
+
+        }
+    public void onBackPressed(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure?");
+        builder.setCancelable(false);
+        builder.setPositiveButton("Yes",this);
+        builder.setNegativeButton("No",this);
+        AlertDialog dialog=builder.create();
+        dialog.show();
+
+
+    }
+    }

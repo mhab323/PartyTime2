@@ -42,7 +42,7 @@ public class BirthdayCustomAdapter extends ArrayAdapter<BirthDay> {
         return v;
 
     }
-
+//changes string to bitmap
     public Bitmap StringToBitMap(String encodedString) {
         try {
             byte[] encodeByte = Base64.decode(encodedString, Base64.DEFAULT);
