@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +24,7 @@
         <activity android:name=".addParty" />
         <activity android:name=".LogInorSignup" />
         <activity android:name=".SignUpScreen" />
-        <activity android:name=".home" />
+        <activity android:name=".MainActivity" />
 
         <!-- <activity android:name=".ListActivity" /> -->
         <activity android:name=".FireActivity" />

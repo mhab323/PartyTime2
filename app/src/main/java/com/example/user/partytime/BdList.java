@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class BdList extends AppCompatActivity implements View.OnClickListener {
+public class  BdList extends AppCompatActivity implements View.OnClickListener {
 
     Button btBack;
 
