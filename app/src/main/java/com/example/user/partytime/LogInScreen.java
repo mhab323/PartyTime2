@@ -26,7 +26,7 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
     private EditText etUsernameLgin;
     private EditText etPasswordLgin;
 
-    private Button btLgin;
+    private Button btnLogin;
 
     private FirebaseAuth mAuth;
 
@@ -40,12 +40,12 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
         etUsernameLgin = findViewById(R.id.etUsernameLgin);
         etPasswordLgin = findViewById(R.id.etPasswordLgin);
 
-        btLgin = findViewById(R.id.btLgin);
-        btLgin.setOnClickListener(this);
+        btnLogin = findViewById(R.id.btnLogin);
+        btnLogin.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
 
-        btLgin.setOnClickListener(new View.OnClickListener() {
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signIn(etUsernameLgin.getText().toString(), etPasswordLgin.getText().toString());
@@ -69,7 +69,7 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
         String username = etUsernameLgin.getText().toString();
         String password = etPasswordLgin.getText().toString();
 
-        if (v == btLgin) {
+        if (v == btnLogin) {
             Intent i = new Intent(this, addParty.class);
             Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
             v.getContext().startActivity(i);
