@@ -44,6 +44,16 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
         btLgin.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
+
+        btLgin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signIn(etUsernameLgin.getText().toString(), etPasswordLgin.getText().toString());
+
+            }
+
+        });
+
     }
 
     public void onStart() {

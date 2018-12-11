@@ -60,11 +60,21 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
             Intent i = new Intent(this, addParty.class);
             Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
             v.getContext().startActivity(i);
+            if(Email.equals("") || password.equals("") ) {
+                Toast.makeText(SignUpScreen.this, "Missing information", Toast.LENGTH_SHORT).show();
+            }
+            else{
+                    createUser(Email, password);
+
+                }
 
 
-        }
 
-        createUser("mhmadabas17@gmail.com","adasdsdsadd");
+
+
+            }
+
+
     }
 
     @Override

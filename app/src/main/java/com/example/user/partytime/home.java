@@ -74,10 +74,10 @@ public class home extends AppCompatActivity implements View.OnClickListener {
         int id = item.getItemId();
         switch (id) {
             case R.id.item1:
-                Toast.makeText(getApplicationContext(), "Settings Selected", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Profile Selected", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.item2:
-                Toast.makeText(getApplicationContext(), "Profile Selected", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Settings Selected", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.item3:
                 Toast.makeText(getApplicationContext(), "Privacy Selected", Toast.LENGTH_LONG).show();
