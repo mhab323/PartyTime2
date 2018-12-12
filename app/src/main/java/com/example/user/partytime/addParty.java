@@ -5,6 +5,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
@@ -103,6 +105,38 @@ public class addParty extends AppCompatActivity implements View.OnClickListener,
         }
 
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.item1:
+                Toast.makeText(getApplicationContext(), "Profile Selected", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.item2:
+                Toast.makeText(getApplicationContext(), "Settings Selected", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.item3:
+                Toast.makeText(getApplicationContext(), "Privacy Selected", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.item4:
+                Intent i = new Intent(this, LogInScreen.class);
+                Toast.makeText(getApplicationContext(), "Log out", Toast.LENGTH_LONG).show();
+                startActivity(i);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+
+        }
+    }
+
+
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

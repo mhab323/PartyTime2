@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LogInScreen extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String TAG = "firebase";
+    private static final String TAG = "FIREBASE";
 
     private TextView lgintv;
 
@@ -45,14 +45,14 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
 
         mAuth = FirebaseAuth.getInstance();
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signIn(etUsernameLgin.getText().toString(), etPasswordLgin.getText().toString());
-
-            }
-
-        });
+//        btnLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                signIn(etUsernameLgin.getText().toString(), etPasswordLgin.getText().toString());
+//
+//            }
+//
+//        });
 
     }
 
@@ -72,8 +72,15 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
         if (v == btnLogin) {
             Intent i = new Intent(this, addParty.class);
             Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
-            v.getContext().startActivity(i);
+            startActivity(i);
 
+        } else {
+            if (username.equals("") || password.equals("")) {
+                Toast.makeText(getApplicationContext(), "Empty username or password", Toast.LENGTH_LONG).show();
+            }
+            else{
+                signIn(username,password);
+            }
         }
     }
 
@@ -86,6 +93,8 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Intent i = new Intent(LogInScreen.this,addParty.class);
+                            startActivity(i);
 //                                updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.

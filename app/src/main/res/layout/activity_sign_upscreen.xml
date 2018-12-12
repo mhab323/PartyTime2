@@ -68,7 +68,7 @@
         android:paddingBottom="10dp" />
 
     <Button
-        android:id="@+id/btSignup"
+        android:id="@+id/btnSigup"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

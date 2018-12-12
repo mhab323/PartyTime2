@@ -55,7 +55,7 @@ public class home extends AppCompatActivity implements View.OnClickListener,Dial
                 Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
                 startActivity(i3);
                 break;
-            case R.id.btBack:
+            case R.id.btBack2:
                 Intent i4 = new Intent(this, addParty.class);
                 Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
                 startActivity(i4);
@@ -67,7 +67,7 @@ public class home extends AppCompatActivity implements View.OnClickListener,Dial
         }
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
+       public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
@@ -85,6 +85,12 @@ public class home extends AppCompatActivity implements View.OnClickListener,Dial
             case R.id.item3:
                 Toast.makeText(getApplicationContext(), "Privacy Selected", Toast.LENGTH_LONG).show();
                 return true;
+            case R.id.item4:
+                Intent i = new Intent(this, LogInScreen.class);
+                Toast.makeText(getApplicationContext(), "Log Out", Toast.LENGTH_LONG).show();
+                startActivity(i);
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
 
@@ -93,7 +99,7 @@ public class home extends AppCompatActivity implements View.OnClickListener,Dial
     }
 
 
-        @Override
+    @Override
         public void onClick (DialogInterface dialog,int which){
             if (which == dialog.BUTTON_POSITIVE) {
                 super.onBackPressed();
