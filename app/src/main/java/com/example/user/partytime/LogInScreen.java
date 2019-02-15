@@ -69,20 +69,16 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
         String username = etUsernameLgin.getText().toString();
         String password = etPasswordLgin.getText().toString();
 
-        if (v == btnLogin) {
-            Intent i = new Intent(this, addParty.class);
-            Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
-            startActivity(i);
 
-        } else {
             if (username.equals("") || password.equals("")) {
                 Toast.makeText(getApplicationContext(), "Empty username or password", Toast.LENGTH_LONG).show();
             }
             else{
                 signIn(username,password);
             }
+
         }
-    }
+
 
     public void signIn(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password)
