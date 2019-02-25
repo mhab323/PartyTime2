@@ -38,9 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btStart = findViewById(R.id.btStart);
         btStart.setOnClickListener(this);
 
-        MediaPlayer bdsong = MediaPlayer.create(MainActivity.this,R.raw.bdsong);
+        Intent i = new Intent(this,MusicServiec.class);
+        startService(i);
 
-        bdsong.start();
+//       MediaPlayer bdsong = MediaPlayer.create(MainActivity.this,R.raw.bdsong);
+//
+//        bdsong.start();
 
 
     }
@@ -56,5 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         }
+
+
     }
 }
