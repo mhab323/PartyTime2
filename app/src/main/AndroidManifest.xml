@@ -29,7 +29,6 @@
         <!-- <activity android:name=".ListActivity" /> -->
         <activity android:name=".FireActivity" />
         <activity android:name=".GuestsList" />
-        <activity android:name=".BdPlaces" />
         <activity android:name=".BdList" />
         <activity android:name=".Ijump" />
         <activity android:name=".BirthdayPlaces" />

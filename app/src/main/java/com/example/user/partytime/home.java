@@ -38,6 +38,9 @@ public class home extends AppCompatActivity implements View.OnClickListener,Dial
     }
 
     @Override
+    /**
+     * this method adds new child to the firebase with name and image
+     */
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btItemList:
@@ -67,12 +70,22 @@ public class home extends AppCompatActivity implements View.OnClickListener,Dial
         }
     }
 
+    /**
+     * this method create menu
+     * @param menu
+     * @return
+     */
        public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
+    /**
+     * this method do functions on the item selected
+     * @param item
+     * @return
+     */
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         switch (id) {
@@ -100,6 +113,9 @@ public class home extends AppCompatActivity implements View.OnClickListener,Dial
 
 
     @Override
+    /**
+     * this method dose functions on alert dialog buttons
+     */
         public void onClick (DialogInterface dialog,int which){
             if (which == dialog.BUTTON_POSITIVE) {
                 super.onBackPressed();
@@ -111,6 +127,9 @@ public class home extends AppCompatActivity implements View.OnClickListener,Dial
 
 
         }
+    /**this method opens dialog interface to user after clicking on the back button
+     *
+     */
     public void onBackPressed(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Are you sure?");

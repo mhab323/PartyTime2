@@ -1,10 +1,19 @@
 package com.example.user.partytime;
 
+/**
+ * guest class has three fields: name phoneNo and attending
+ */
 class Guest {
     private String name;
     private String phoneNo;
     private boolean attending;
 
+    /**
+     * constructor builds new guest with three parameters
+     * @param name
+     * @param phoneNo
+     * @param attending
+     */
     public Guest(String name, String phoneNo, boolean attending) {
         this.name = name;
         this.phoneNo = phoneNo;

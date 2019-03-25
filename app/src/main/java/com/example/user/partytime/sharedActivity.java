@@ -39,6 +39,9 @@ public class sharedActivity extends AppCompatActivity implements View.OnClickLis
 
 
     @Override
+    /**
+     * this method share child with firebase
+     */
     public void onClick(View v) {
         SharedPreferences pref = getSharedPreferences("myPref",MODE_PRIVATE);
         //open the file for editing

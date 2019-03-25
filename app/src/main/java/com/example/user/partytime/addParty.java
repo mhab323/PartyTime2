@@ -56,6 +56,9 @@ public class addParty extends AppCompatActivity implements View.OnClickListener,
         myRef.addChildEventListener(new ChildEventListener() {
 
             @Override
+            /**
+             * this method build new child to the firebase with date name and place
+             */
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Map<String, String> map = (Map<String, String>) dataSnapshot.getValue();
                 String date = map.get("date");
@@ -88,8 +91,10 @@ public class addParty extends AppCompatActivity implements View.OnClickListener,
 
 
     }
-
-
+    /**
+     * this method opens another activity after clicking on button.
+     * @param v
+     */
     @Override
     public void onClick(View v) {
 
@@ -106,12 +111,22 @@ public class addParty extends AppCompatActivity implements View.OnClickListener,
 
     }
 
+    /**
+     * this method create menu
+     * @param menu
+     * @return
+     */
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
+    /**
+     * this method do functions on the item selected
+     * @param item
+     * @return
+     */
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         switch (id) {
@@ -139,6 +154,9 @@ public class addParty extends AppCompatActivity implements View.OnClickListener,
 
 
     @Override
+    /**
+     * this method do functions on clicked items ibn list view and transfer to another activity
+     */
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             BirthDay birthDay = Birthday2.get(position);
             Intent i = new Intent(addParty.this, home.class);
@@ -146,6 +164,10 @@ public class addParty extends AppCompatActivity implements View.OnClickListener,
             startActivity(i);
     }
     @Override
+    /**
+     * this method dose functions on alert dialog buttons
+     *
+     */
     public void onClick(DialogInterface dialog, int which) {
         if(which==dialog.BUTTON_POSITIVE){
             super.onBackPressed();
@@ -157,6 +179,10 @@ public class addParty extends AppCompatActivity implements View.OnClickListener,
     }
 
     @Override
+    /**this method opendsdialog interface to user after clicking on the back button
+     *
+      */
+
     public void onBackPressed(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Are you sure?");

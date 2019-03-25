@@ -4,6 +4,9 @@ import android.graphics.Bitmap;
 
 import java.io.Serializable;
 
+/**
+ * item class has two fields image name
+ */
 public class Item implements Serializable{
     private String image;
 

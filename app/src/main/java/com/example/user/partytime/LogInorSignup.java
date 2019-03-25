@@ -32,6 +32,9 @@ public class LogInorSignup extends AppCompatActivity implements View.OnClickList
     }
 
     @Override
+    /**
+     * this method opens another activity after clicking on button.
+     */
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnLogin:

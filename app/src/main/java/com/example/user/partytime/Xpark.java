@@ -31,6 +31,9 @@ public class Xpark extends AppCompatActivity implements View.OnClickListener {
     }
 
     @Override
+    /**
+     * this method opens browser after clicking on button.
+     */
     public void onClick(View v) {
         if(v == btUrl2){
             String url = "https://www.pex.co.il/";

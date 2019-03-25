@@ -30,7 +30,9 @@ public class Bowling extends AppCompatActivity implements View.OnClickListener {
         btUrl4.setOnClickListener(this);
     }
 
-    @Override
+    @Override/**
+ this method opens browser after clicking on button.
+ **/
     public void onClick(View v) {
         if(v == btUrl4){
             String url = "http://www.bola.co.il/Info.aspx?ContentTypeID=1&ContentID=54";

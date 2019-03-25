@@ -33,6 +33,9 @@ public class Cinema extends AppCompatActivity implements View.OnClickListener {
     }
 
     @Override
+    /**
+     * this method opens browser after clicking on button.
+     */
     public void onClick(View v) {
         if(v == btUrl3){
             String url = "https://www.yesplanet.co.il/static/iw/il/birthday-in-cinemas";

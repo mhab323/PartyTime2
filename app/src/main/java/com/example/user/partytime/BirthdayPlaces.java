@@ -31,6 +31,10 @@ public class BirthdayPlaces extends AppCompatActivity implements View.OnClickLis
     }
 
     @Override
+    /**
+     * this method opens another activity after clicking on button.
+     */
+
     public void onClick(View v) {
         if(v ==btPlaces){
             Intent intent = new Intent(this,Places.class);

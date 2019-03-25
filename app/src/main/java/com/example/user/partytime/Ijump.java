@@ -33,6 +33,9 @@ public class Ijump extends AppCompatActivity implements View.OnClickListener {
     }
 
     @Override
+    /**
+     * this method opens browser after clicking on button.
+     */
     public void onClick(View v) {
         if(v == btUrl){
             String url = "http://www.ijump.co.il/";

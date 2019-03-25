@@ -7,8 +7,10 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
@@ -74,6 +76,9 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
     }
 
     @Override
+    /**
+     * this method opens another activity after clicking on button.
+     */
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btDone:
@@ -106,6 +111,12 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
+    /**
+     * this method adds the camera picture or the gallery picture to the firebase as string
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
 
@@ -132,6 +143,12 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
+    /**
+     * this activity changes picture form bitmap to string
+     * @param bitmap
+     * @return
+     */
+    @RequiresApi(api = Build.VERSION_CODES.FROYO)
     public String BitMapToString(Bitmap bitmap) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
@@ -140,7 +157,11 @@ public class NewBDActivity extends AppCompatActivity implements View.OnClickList
         return temp;
     }
 
-
+    /**
+     * this method saves the picture to add her to firebase
+     * @param bitmap
+     * @return
+     */
     public String saveImage(Bitmap bitmap) {
         File root = Environment.getExternalStorageDirectory();
 

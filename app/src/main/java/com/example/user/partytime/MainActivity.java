@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     @Override
+    /**
+     * this method opens another activity after clicking on button.
+     */
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btStart: {

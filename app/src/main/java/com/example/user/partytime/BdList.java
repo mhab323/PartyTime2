@@ -57,6 +57,9 @@ public class  BdList extends AppCompatActivity implements View.OnClickListener {
         myRef.addChildEventListener(new ChildEventListener() {
 
             @Override
+            /**
+             * this method adds new child to the firebase with name and image
+             */
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Map<String, String> map = (Map<String, String>) dataSnapshot.getValue();
                 String name = map.get("image");
@@ -93,6 +96,9 @@ public class  BdList extends AppCompatActivity implements View.OnClickListener {
     }
 
     @Override
+    /**
+     * this method opens dialog interface to user after clicking on the back button
+     */
     public void onClick(View v) {
 
 

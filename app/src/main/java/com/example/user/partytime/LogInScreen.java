@@ -56,6 +56,7 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
 
     }
 
+
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
@@ -64,6 +65,9 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
     }
 
     @Override
+    /**
+     * this method enter another activity after checking password and username
+     */
     public void onClick(View v) {
 
         String username = etUsernameLgin.getText().toString();
@@ -79,6 +83,11 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
 
         }
 
+    /**
+     * this method creates new user and adds it in the firebase
+     * @param email
+     * @param password
+     */
 
     public void signIn(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password)

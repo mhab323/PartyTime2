@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.security.PrivateKey;
 import java.util.ArrayList;
 
+/**
+ * birthday class has five fields: name date address arraylist<item> arraylis<guest>
+ */
+
 public class BirthDay implements Serializable {
     private String name;
     private String date;
@@ -12,7 +16,12 @@ public class BirthDay implements Serializable {
     private ArrayList<Item> items;
     private ArrayList<Guest> guests;
 
-
+    /**
+     * constructor builds new object with 3 parameters
+     * @param name
+     * @param date
+     * @param address
+     */
     public BirthDay(String name, String date, String address) {
         this.date = date;
         this.name = name;

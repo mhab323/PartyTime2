@@ -24,6 +24,14 @@ public class MusicServiec extends Service {
         super.onCreate();
         mp=MediaPlayer.create(getApplicationContext(),R.raw.bdsong);
     }
+
+    /**
+     * this method starts the music in the start activity and loops it
+     * @param intent
+     * @param flags
+     * @param startId
+     * @return
+     */
     public int onStartCommand(Intent intent,int flags ,int startId){
         mp.setLooping(true);
         mp.start();
@@ -32,6 +40,9 @@ public class MusicServiec extends Service {
 
     }
 
+    /**
+     * this method stops the music after shutting down thr app
+     */
     public void onDestroy(){
         mp.stop();
         isRunning=false;

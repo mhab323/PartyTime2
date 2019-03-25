@@ -50,6 +50,9 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    /**
+     *      * this method opens another activity after clicking on button.
+     */
     public void onClick(View v) {
 
         String username = usernameSignup.getText().toString();
@@ -85,6 +88,11 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
 //        updateUI(currentUser);
     }
 
+    /**
+     * this method creates new user with email and password and adds him to firebase
+     * @param email
+     * @param password
+     */
     public  void createUser(String email, String password){
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

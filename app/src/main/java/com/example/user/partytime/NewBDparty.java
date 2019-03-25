@@ -16,11 +16,9 @@ public class NewBDparty extends AppCompatActivity {
 
     TextView tvNewParty;
 
-    EditText etPartyName,etDate,etAddress;
+    EditText etPartyName, etDate, etAddress;
 
     Button btDone2;
-
-
 
 
     @Override
@@ -43,30 +41,16 @@ public class NewBDparty extends AppCompatActivity {
                 String address = etAddress.getText().toString();
                 String name = etPartyName.getText().toString();
                 String date = etDate.getText().toString();
-                Intent i = new Intent(getApplicationContext(),addParty.class);
-                Toast.makeText(getApplicationContext(),"Button is clicked",Toast.LENGTH_LONG).show();
-                myRef.push().setValue(new BirthDay(name,date,address));
+                Intent i = new Intent(getApplicationContext(), addParty.class);
+                Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
+                myRef.push().setValue(new BirthDay(name, date, address));
                 startActivity(i);
             }
         });
-
-
-
     }
-
- /*   @Override
-    public void onClick(View v) {
-
-        switch (v.getId()) {
-            case R.id.btDone2:
-                Intent i = new Intent(getApplicationContext(),addParty.class);
-                Toast.makeText(getApplicationContext(),"Button is clicked",Toast.LENGTH_LONG).show();
-                startActivity(i);
-                break;
-            default:
-                break;
-
-        }
-
-    }*/
 }
+
+
+
+
+
